@@ -1,0 +1,43 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Guild {
+    id      BigInt   @id
+    tickets Ticket[]
+
+    @@map("guilds")
+}
+
+model Ticket {
+    /// The channel ID of the ticket channel.
+    channelId BigInt @map("channel_id")
+    /// The guild ID of the ticket channel.
+    guildId   BigInt @map("guild_id")
+    /// The user who created the ticket.
+    userId    BigInt @map("user_id")
+    ///
+    guild     Guild  @relation(fields: [guildId], references: [id])
+    user      User  @relation(fields: [userId], references: [id])
+
+    @@id([channelId, guildId])
+    @@map("tickets")
+}
+
+model User {
+    /// The user's ID.
+    id      BigInt   @id
+    /// the XP the user has.
+    xp      Int      @default(0)
+    /// The level the user is on.
+    level   Int      @default(0)
+    ///
+    tickets Ticket[]
+
+    @@map("users")
+}
