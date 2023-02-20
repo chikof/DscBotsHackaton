@@ -15,7 +15,7 @@
 	"scripts": {
 		"build": "tsc -b src",
 		"dev": "pnpm build && pnpm start",
-		"postinstall": "husky install .github/husky",
+		"postinstall": "husky install .github/husky && prisma generate",
 		"lint": "eslint --fix --ext ts src",
 		"start": "node --enable-source-maps dist/main.js",
 		"format": "prettier --write --loglevel=warn \"src/**/*.{js,ts,mts,json}\"",
@@ -24,7 +24,7 @@
 	},
 	"dependencies": {
 		"@kaname-png/plugin-subcommands-advanced": "^2.2.1",
-		"@prisma/client": "^4.10.1",
+		"@prisma/client": "^4.9.0",
 		"@sapphire/decorators": "^6.0.0",
 		"@sapphire/discord.js-utilities": "^6.0.2",
 		"@sapphire/framework": "^4.1.1",
@@ -57,7 +57,7 @@
 		"lint-staged": "^13.1.2",
 		"prettier": "^2.8.4",
 		"pretty-quick": "^3.1.3",
-		"prisma": "^4.10.1",
+		"prisma": "^4.9.0",
 		"typescript": "^4.9.5"
 	},
 	"engines": {
