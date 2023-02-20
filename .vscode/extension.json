@@ -1,0 +1,14 @@
+{
+	"recommendations": [
+		"mikestead.dotenv",
+		"EditorConfig.EditorConfig",
+		"usernamehw.errorlens",
+		"bierner.github-markdown-preview",
+		"dbaeumer.vscode-eslint",
+		"foxundermoon.shell-format",
+		"Gruntfuggly.todo-tree",
+		"esbenp.prettier-vscode",
+		"bungcip.better-toml",
+		"be5invis.toml"
+	]
+}
