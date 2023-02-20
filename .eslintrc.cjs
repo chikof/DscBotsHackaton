@@ -1,11 +1,11 @@
-const path = require('node:path');
+const { join } = require('node:path');
 const config = require('@sapphire/eslint-config');
 
 module.exports = {
 	...config,
 	parserOptions: {
 		...config.parserOptions,
-		project: path.join(__dirname, 'tsconfig.eslint.json')
+		project: join(__dirname, 'tsconfig.eslint.json')
 	},
 	rules: {
 		...config.rules,
