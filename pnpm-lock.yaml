@@ -12,7 +12,7 @@ specifiers:
   '@sapphire/decorators': ^6.0.0
   '@sapphire/discord.js-utilities': ^6.0.2
   '@sapphire/eslint-config': ^4.3.8
-  '@sapphire/framework': ^4.1.1
+  '@sapphire/framework': ^4.2.0
   '@sapphire/pieces': ^3.6.0
   '@sapphire/plugin-logger': ^3.0.1
   '@sapphire/plugin-subcommands': ^4.0.0
@@ -45,7 +45,7 @@ dependencies:
   '@prisma/client': 4.10.1_prisma@4.10.1
   '@sapphire/decorators': 6.0.0
   '@sapphire/discord.js-utilities': 6.0.2
-  '@sapphire/framework': 4.1.1
+  '@sapphire/framework': 4.2.0
   '@sapphire/pieces': 3.6.0
   '@sapphire/plugin-logger': 3.0.1
   '@sapphire/plugin-subcommands': 4.0.0
@@ -483,8 +483,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sapphire/framework/4.1.1:
-    resolution: {integrity: sha512-vI9RXbBR3m2MG7L+iBwU8Ai8qkVmdYW8El5I5ODtU6IF72M+U/VPgruXOZyg9HPN3d6NbOJ1K5ihhq8GIDWv2g==}
+  /@sapphire/framework/4.2.0:
+    resolution: {integrity: sha512-UEM1tinRkFxbkLpGRh4I7mcTrZNUPHMYcRdvPrlvaUfUP/FPg5DVSPZ26Iu9wgqdUCe9co9WEH9mBz6E+zQA3A==}
     engines: {node: '>=16.6.0', npm: '>=7.0.0'}
     dependencies:
       '@discordjs/builders': 1.4.0
