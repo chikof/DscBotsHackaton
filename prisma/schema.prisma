@@ -8,25 +8,34 @@ datasource db {
 }
 
 model Guild {
-    id      BigInt   @id
-    tickets Ticket[]
+    id             BigInt   @id
+    ticketChannel  BigInt   @map("ticket_channel")
+    ticketCategory BigInt?  @map("ticket_category")
+    tickets        Ticket[]
 
     @@map("guilds")
 }
 
 model Ticket {
     /// The channel ID of the ticket channel.
-    channelId BigInt @map("channel_id")
+    channelId BigInt       @map("channel_id")
     /// The guild ID of the ticket channel.
-    guildId   BigInt @map("guild_id")
+    guildId   BigInt       @map("guild_id")
     /// The user who created the ticket.
-    userId    BigInt @map("user_id")
+    userId    BigInt       @map("user_id")
+    /// The status of the ticket.
+    status    TicketStatus @default(OPEN)
     ///
-    guild     Guild  @relation(fields: [guildId], references: [id])
-    user      User  @relation(fields: [userId], references: [id])
+    guild     Guild        @relation(fields: [guildId], references: [id])
+    user      User         @relation(fields: [userId], references: [id])
 
     @@id([channelId, guildId])
     @@map("tickets")
+}
+
+enum TicketStatus {
+    OPEN
+    CLOSED
 }
 
 model User {
