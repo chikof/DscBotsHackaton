@@ -1,4 +1,5 @@
 import type { ArrayString } from '@skyra/env-utilities';
+import type { PrismaClient } from '@prisma/client';
 
 declare module 'discord.js' {
 	interface Client {
@@ -20,6 +21,12 @@ declare module '@skyra/env-utilities' {
 
 		API_URL: string;
 		API_KEY: string;
+		DATABASE_URL: string;
+	}
+}
+declare module '@sapphire/pieces' {
+	interface Container {
+		prisma: PrismaClient;
 	}
 }
 

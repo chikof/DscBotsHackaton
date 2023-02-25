@@ -7,4 +7,9 @@ export class NephClient extends SapphireClient {
 	public constructor() {
 		super(CLIENT_OPTIONS);
 	}
+
+	public override async login(token: string = process.env.DISCORD_TOKEN) {
+		const result = await super.login(token);
+		return result;
+	}
 }
